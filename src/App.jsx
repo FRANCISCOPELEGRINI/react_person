@@ -32,26 +32,3 @@ export const App = () => (
     <Person person={alex} />
   </div>
 );
-
-
-/*
-
-Criar um componente Person que renderize os detalhes de uma pessoa.
-
-Usar o componente Person 3 vezes no App, passando os objetos misha, olya e alex.
-
-Passar o objeto inteiro como prop: <Person person={misha} />.
-
-Se não existir age no objeto, não renderizar a idade.
-
-Se a pessoa for casada:
-
-Se for homem → mostrar "wife: {nome da parceira}".
-
-Se for mulher → mostrar "husband: {nome do parceiro}".
-
-Se a pessoa não for casada, mostrar: "I am not married".
-
-Manter os nomes de classes exatamente iguais: Person, Person__name, Person__age, Person__partner.
-
-*/
