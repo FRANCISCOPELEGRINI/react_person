@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.scss';
 
+import { Person } from './components/Person/Person';
+
 export const misha = {
   name: 'Misha',
   age: 37,
@@ -25,21 +27,31 @@ export const alex = {
 
 export const App = () => (
   <div className="App">
-    <section className="Person">
-      <h2 className="Person__name">My name is Misha</h2>
-      <p className="Person__age">I am 37</p>
-      <p className="Person__partner">Natasha is my wife</p>
-    </section>
-
-    <section className="Person">
-      <h2 className="Person__name">My name is Olya</h2>
-      <p className="Person__partner">Maksym is my husband</p>
-    </section>
-
-    <section className="Person">
-      <h2 className="Person__name">My name is Alex</h2>
-      <p className="Person__age">I am 25</p>
-      <p className="Person__partner">I am not married</p>
-    </section>
+    <Person person={misha} />
+    <Person person={olya}/>
+    <Person person={alex} />
   </div>
 );
+
+
+/*
+
+Criar um componente Person que renderize os detalhes de uma pessoa.
+
+Usar o componente Person 3 vezes no App, passando os objetos misha, olya e alex.
+
+Passar o objeto inteiro como prop: <Person person={misha} />.
+
+Se não existir age no objeto, não renderizar a idade.
+
+Se a pessoa for casada:
+
+Se for homem → mostrar "wife: {nome da parceira}".
+
+Se for mulher → mostrar "husband: {nome do parceiro}".
+
+Se a pessoa não for casada, mostrar: "I am not married".
+
+Manter os nomes de classes exatamente iguais: Person, Person__name, Person__age, Person__partner.
+
+*/
